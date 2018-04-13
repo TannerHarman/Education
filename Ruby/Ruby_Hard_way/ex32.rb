@@ -1,0 +1,32 @@
+the_count = [1, 2 ,3, 4, 5]
+fruits = ['apples', 'oranges', 'pears', 'apricots']
+change = [1, 'pennies', 'dimes', 3, 'quarters']
+
+#this first kind of for-loop goes through a list in a more traditional stye found in other languages 
+
+the_count.each do |count|
+  puts "This count #{count}"
+end
+
+# Same as above, but in a more Ruby style, this and the next one are the preferred way Ruby for-loops are written
+
+fruits.each do |fruit|
+  puts "A fruit of type: #{fruit}"
+end
+
+# Also we can go thorugh mixed lists too. Note, this is yet another style, exaclty like about, but a different syntax (way to write).
+
+change.each { |i| puts "I got #{i}" }
+
+# We can also build lists, first start with an empty one
+elements = []
+
+# Then use the range operator to do 0 to 5 counts
+(0..5).each do |i|
+  puts "adding #{i} to the list."
+  #pushes the i variable on the *end* of the list
+  elements.push(i)
+end
+
+#now we can print them out too
+elements.each { |i| puts "Elements was: #{i}" }
