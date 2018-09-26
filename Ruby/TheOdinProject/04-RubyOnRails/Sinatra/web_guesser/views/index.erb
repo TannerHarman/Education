@@ -1,8 +1,14 @@
 <html>
   <head></head>
   <body>
-    <p>The secret number is: <%= number %></p>
+    <form>
+      <input type='text' name='guess' />
+      <input type='submit' value='Guess!' />
+    </form>
+
+    <p>Your Guess: <%= guess %> </p>
+    <p>Hint: <%= message %> </p>
+    <p><%= "The secret number is: #{number}" if message == 'You got it right!'%></p>
+
   </body>
 </html>
-
-
