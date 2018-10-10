@@ -6,7 +6,7 @@
       }
     </style>
   </head>
-  
+
   <body>
     <form>
       <input type='text' name='guess' />
@@ -15,7 +15,7 @@
 
     <p>Your Guess: <%= guess %> </p>
     <p>Hint: <%= message %> </p>
-    <p><%= "The secret number is: #{number}" if message == 'You got it right!'%></p>
-
+    <p><%= "The secret number was: #{number}. Play Again, by guessing another number!" if message == 'You got it right! Game has been Reset!'%></p>
+    <p>Guesses Remailing: <%= guesses %> </p>
   </body>
 </html>
