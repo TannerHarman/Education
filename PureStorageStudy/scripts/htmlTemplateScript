@@ -1,0 +1,52 @@
+#! /bin/bash
+
+# sysinfo_page - A Script to produce an HTML file
+
+##### Constants
+
+title="Basic HTML Template"
+CURRENT_DATE=$(date +"%x %r %Z")
+TIME_STAMP="Updated on $CURRENT_DATE by $USER"
+
+##### Functions
+
+system_info()
+{
+  # Temporary function stub
+  echo "function system_info"
+}
+
+show_uptime()
+{
+  echo "<h2>System uptime</h2>"
+  echo "<pre>"
+  uptime
+  echo "</pre>"
+}
+
+drive_space()
+{
+  # Temporary function stub
+  echo "function drive_space"
+}
+
+home_space()
+{
+  # Temporary function stub
+  echo "function home_space"
+}
+
+##### Main
+
+cat <<- _EOF_
+  <html>
+    <head>
+      <title>$title $HOSTNAME</title>
+    </head>
+
+    <body>
+      <h1$title $HOSTNAME</h1>
+      <p>$TIME_STAMP</p>
+    </body>
+  </html>
+_EOF_
