@@ -68,7 +68,7 @@ What is the syntax for a ternary operator?
     - Conditional ? "True-Value" : "False-Value"
     
 What is the relationship between null and undefined?
-    -
+    - 
     
 What are conditionals?
     -
