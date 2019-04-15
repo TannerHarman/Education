@@ -1,0 +1,75 @@
+What are the seven data types of javascript?
+    - Number
+    - String
+    - Boolean (True, False)
+    - Null (non-existing object)
+    - Undefined (No value assigned)
+    - Object
+    - Symbol
+
+Which data type is NOT primitive?
+    - Object
+    
+What is the difference between single, double, and backtick quotes for strings?
+    - `Backticks` are used for String interpolation
+    - "Double Quotes" can be used when you need to single quote something inside of a string
+    - 'Single Quotes' are the most basic way to define a string. You'll need to use escape characters to add single quotes properly.
+    
+Which type of quote lets you embed variables/expressions into a string?
+    - Backticks
+    
+How do you embed variables/expressions into a string?
+    - You use backticks and add you variable with the following syntax `${variable}`
+    
+How do you escape characters in a string?
+    - You use a \ in front of the character you need to escape.
+    
+What is the difference between slice/substring/substr?
+    -
+    
+What are methods?
+    - Methods are built in functionality for a language
+    
+What are the three logical operators and what do they stand for?
+    - || - This means 'Or'. So if one of the two things being compared is true, then the result is true[]
+    - && - this means 'And'. Both things being compared need to be true for the result to be true.
+    - ! - This means 'Not'. This returns true if the things being compared don't match or arent' equal. 
+    
+What are the comparison operators?
+    - < - Less than symbol
+    - > - Greater than symbol
+    - <= - Less than or Equal to
+    - >= - Greater than ore Equal to
+    - == - Equals - Checks to see if the values are equal
+    - === - Strict Equals - Checks to see if both the values & data Types are equal.
+    
+What is nesting?
+    -
+    
+What are truthy and falsy values?
+    - 
+    
+What are the falsy values in Javascript?
+    -
+    
+What is the syntax for an if/else if/else conditional?
+    -   if (hour < 10 ) {
+          greeting = "Good Morning";
+        } else if (time < 20) {
+          greeting = "Good Day";
+        } else {
+          greeting = "Good Evening"
+        }
+    
+What is the syntax for a switch statement?
+    - 
+    
+What is the syntax for a ternary operator?
+    - Conditional ? "True-Value" : "False-Value"
+    
+What is the relationship between null and undefined?
+    -
+    
+What are conditionals?
+    -
+    
