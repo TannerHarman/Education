@@ -1,3 +1,6 @@
+userScore = 0
+botScore = 0
+
 let computerPlay = function() {
   let computerChoice = Math.floor(Math.random()*3);
   return computerChoice + 1
@@ -16,9 +19,6 @@ let idToString = function(id) {
 };
 
 let game = function(playerSelection, computerSelection) {
-
-  userScore = 0
-  botScore = 0
 
   let playRound = function() {
 
@@ -62,7 +62,7 @@ let game = function(playerSelection, computerSelection) {
   ${generateResponse(round)}`;
 };
 
-let userSelection = 1
+let userSelection = prompt("Choose '1' for 'Rock', '2' for 'Paper', and '3' for 'Scissors'")
 let botSelection = computerPlay()
 
 console.log("\n")
