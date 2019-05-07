@@ -1,3 +1,9 @@
+var btn = document.querySelectorAll('.btn');
+
+btn.forEach(e => e.addEventListener('click', function() {
+console.log(game(e.id, computerPlay()));
+}));
+
 userScore = 0
 botScore = 0
 
@@ -61,9 +67,3 @@ let game = function(playerSelection, computerSelection) {
   return `Your Score: ${userScore} - Bot Score: ${botScore} \n
   ${generateResponse(round)}`;
 };
-
-let userSelection = prompt("Choose '1' for 'Rock', '2' for 'Paper', and '3' for 'Scissors'")
-let botSelection = computerPlay()
-
-console.log("\n")
-console.log(game(userSelection, botSelection));
