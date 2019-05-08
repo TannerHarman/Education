@@ -1,7 +1,7 @@
 var btn = document.querySelectorAll('.btn');
 
 btn.forEach(e => e.addEventListener('click', function() {
-console.log(game(e.id, computerPlay()));
+  game(e.id, computerPlay());
 }));
 
 userScore = 0
@@ -64,6 +64,18 @@ let game = function(playerSelection, computerSelection) {
   let round = playRound()
   incrementScore(round)
 
-  return `Your Score: ${userScore} - Bot Score: ${botScore} \n
-  ${generateResponse(round)}`;
+  const usersScore = document.getElementById('userScore').childNodes[3];
+  usersScore.textContent = userScore;
+
+  const botsScore = document.getElementById('botScore').lastElementChild;
+  botsScore.textContent = botScore;
+
+  const usersThrow = document.getElementById('user-throw').lastElementChild;
+  usersThrow.textContent = idToString(playerSelection);
+
+  const botsThrow = document.getElementById('bots-throw').lastElementChild;
+  botsThrow.textContent = idToString(computerSelection);
+
+  const outcome = document.getElementById('outcome').firstElementChild;
+  outcome.textContent = generateResponse(round);
 };
