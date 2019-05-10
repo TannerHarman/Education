@@ -18,11 +18,15 @@ main {
   border: 1px solid #6CAEDF;
   width: 600px;
   height: 600px;
-  background: #00471B;
+  background-image: url('images/jazz_logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; 
+  background-color: #FFA200;
   display:flex;
   flex-wrap: wrap;
 }
 
 .f-box {
-  background-color:  #F9A01B;
+  background-color:  #00471B;
 }
