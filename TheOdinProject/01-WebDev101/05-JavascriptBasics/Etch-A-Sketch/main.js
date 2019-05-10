@@ -1,6 +1,7 @@
-let container = document.querySelector('main');
+const container = document.querySelector('main');
+const restart = document.getElementById('clear');
 
-let gridInput= 16;
+let gridInput = 16;
 
 // box amount formula
 function generateBoxes(input) {
@@ -14,14 +15,14 @@ function generateBoxes(input) {
 
   for (i = numberOfBoxes; i > 0; i--) {
     const box = document.querySelector('.box')
-    box.style.height = `${600/gridInput}px`;
-    box.style.width = `${600/gridInput}px`;
+    box.style.height = `${600/input}px`;
+    box.style.width = `${600/input}px`;
     box.classList.add('f-box')
     box.classList.remove('box')
   };
 
-  function blackBox(e) {
-    this.style.background = 'black';
+  function blackBox() {
+    this.style.background = 'transparent';
   };
   
   const boxes = document.querySelectorAll('.f-box');
@@ -29,3 +30,13 @@ function generateBoxes(input) {
 };
 
 generateBoxes(gridInput);
+restart.onclick = function() {
+  const boxes = document.querySelectorAll('.f-box')
+  boxes.forEach(box => {
+    box.remove();
+  });
+
+  gridInput = prompt('What new Grid Size do you want?', 16);
+  generateBoxes(gridInput);
+};
+
