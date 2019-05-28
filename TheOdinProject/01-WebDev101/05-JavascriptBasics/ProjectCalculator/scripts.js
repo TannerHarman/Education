@@ -26,7 +26,16 @@ function pushDecimal() {
 function outputArray() {
   equation.push(currentNum);
   console.log(equation.join(''));
+  console.log(eval(analyzeEqation(equation)));
   equation = [];
+  currentNum = '';
+};
+
+function analyzeEqation(equation) {
+  newEquation = equation.join('')
+  newEquation = newEquation.replace(/×/g, '*');
+  newEquation = newEquation.replace(/÷/g, '/');
+  return newEquation
 };
 
 inputs.forEach(number => number.addEventListener('click', addNum));
