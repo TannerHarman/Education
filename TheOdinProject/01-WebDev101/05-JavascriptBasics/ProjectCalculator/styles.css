@@ -17,8 +17,13 @@ html {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 35% 1fr;
-  border-radius: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
   overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .display {
@@ -80,7 +85,7 @@ html {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.input, .equal {
+.input, .equal, .operator, .decimal {
   display: grid;
   justify-content: center;
   align-content: center;
@@ -90,7 +95,7 @@ html {
   font-weight: 600;
 }
 
-.input:hover, .equal:hover {
+.input:hover, .equal:hover, .operator:hover, .decimal:hover {
   background-color: aliceblue;
 }
 
