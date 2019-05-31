@@ -1,3 +1,6 @@
+const calculations = document.querySelector('#calculations')
+const equalSymbol = document.querySelector('#equals')
+const total = document.querySelector('#total')
 const inputs = document.querySelectorAll('.input');
 const operators = document.querySelectorAll('.operator');
 const equals = document.querySelector('.equal');
@@ -9,15 +12,28 @@ let equation = [];
 
 function addNum() {
   currentNum += this.textContent;
+  calculations.textContent += this.textContent;
 }
 
-function pushNum() {
+function addOperator() {
+  lastChar = equation[equation.length - 1];
   equation.push(currentNum);
-  equation.push(this.textContent);
-  currentNum = '';
+
+  if (lastChar == '+' || 
+      lastChar == '-' || 
+      lastChar == '×' || 
+      lastChar == '÷') {
+    lastChar = this.textContent;
+    calculations.textContent += this.textContent;
+    currentNum = '';
+  } else {
+    equation.push(this.textContent);
+    calculations.textContent += this.textContent;
+    currentNum = '';
+  }
 };
 
-function pushDecimal() {
+function addDecimal() {
   if (!currentNum.includes('.')) {
     currentNum += '.';
   }
@@ -39,6 +55,6 @@ function analyzeEqation(equation) {
 };
 
 inputs.forEach(number => number.addEventListener('click', addNum));
-operators.forEach(opp => opp.addEventListener('click', pushNum))
-decimal.addEventListener('click', pushDecimal);
+operators.forEach(opp => opp.addEventListener('click', addOperator))
+decimal.addEventListener('click', addDecimal);
 equals.addEventListener('click', outputArray);
