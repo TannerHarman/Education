@@ -55,7 +55,6 @@ function addOperator() {
   } else if (previousNum) {
       equation.push(previousNum);
       operator.textContent = operatorSym = this.textContent;
-      calculation.textContent = previousNum = calculate();
   } else {
     operatorSym = this.textContent;
     previousNum = currentNum;
@@ -67,15 +66,30 @@ function addOperator() {
   }
 };
 
-function analyzeEqation() {
-  newEquation = equation.join('')
-  newEquation = newEquation.replace(/×/g, '*');
-  newEquation = newEquation.replace(/÷/g, '/');
-  return newEquation
-};
-
 let calculate = () => {
-  return runningTotal = eval(analyzeEqation());
+  newEquation = equation.join('');
+
+  if (newEquation.includes('×')) {
+      let numsArr = newEquation.split('×');
+      let a = Number(numsArr.shift());
+      let b = Number(numsArr.pop());
+      return a * b;
+  } else if (newEquation.includes('÷')) {
+      let numsArr = newEquation.split('÷');
+      let a = Number(numsArr.shift());
+      let b = Number(numsArr.pop());
+      return a / b;
+  } else if (newEquation.includes('+')) {
+      let numsArr = newEquation.split('+');
+      let a = Number(numsArr.shift());
+      let b = Number(numsArr.pop());
+      return a + b;
+  } else {
+      let numsArr = newEquation.split('-');
+      let a = Number(numsArr.shift());
+      let b = Number(numsArr.pop());
+      return a - b;
+  }
 }
 
 const equate = () => {
@@ -85,8 +99,8 @@ const equate = () => {
     currentSet.push(previousNum, operatorSym, currentNum);
     equation.push(currentSet.join(''));
     
-    calculation.textContent = previousNum = calculate();
-    operator.textContent = operatorSym = this.textContent;
+    calculation.textContent = previousNum = calculate();;
+    operator.textContent = operatorSym = '';
     total.textContent = currentNum = '';
   }
 }
