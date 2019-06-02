@@ -85,7 +85,7 @@ html {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.input, .equal, .operator, .decimal {
+.input, .equal, .operator, .decimal, .clear {
   display: grid;
   justify-content: center;
   align-content: center;
@@ -95,7 +95,7 @@ html {
   font-weight: 600;
 }
 
-.input:hover, .equal:hover, .operator:hover, .decimal:hover {
+.input:hover, .equal:hover, .operator:hover, .decimal:hover, .clear:hover {
   background-color: aliceblue;
 }
 
