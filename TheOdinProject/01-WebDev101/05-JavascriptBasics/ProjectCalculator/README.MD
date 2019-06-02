@@ -3,6 +3,5 @@
   * Add Backspace Button
 =======
   * Add Backspace Button
-  * Create own Math Functions instead of using Eval()
   * make operator replace previous operator if clicked twice. 
 >>>>>>> 6853928f3f65a74f6972d6bac2a4fd490e4dd58d
