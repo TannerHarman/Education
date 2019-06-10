@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>TanTube</title>
-  <link rel = "stylesheet"
-   type = "text/css"
-   href = "styles.css" />
-</head>
-<body>
-  <header>
-    <div class="nav">
-      <div class="left-side">
-        <div id="hamburger">Menu</div>
-        <div id="Premium">Premium</div>
-      </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TanTube</title>
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="left-side">
+          <img class='icon' id="hamburger" src="/images/burger.png">
+          <img class='icon' id="premium" src="/images/premium.jpg">
+        </div>
 
-      <div class="center">
-        <div id="search-bar">Search</div>
+        <div class="center">
+          <input type='text' id="search-bar">
+          <img class='icon' id="create-video" src="/images/search.png">
+        </div>
+        
+        <div class="right-side">
+            <img class='icon' id="create-video" src="/images/stream.png">
+            <img class='icon' id="google-apps" src="/images/apps.png">
+            <img class='icon' id="messages" src="/images/share.png">
+            <img class='icon' id="bell" src="/images/notification.png">
+            <img class='icon' id="profile" src="/images/photo.jpg">
+        </div>
       </div>
-      
-      <div class="right-side">
-        <div id="create-video">Create Video</div>
-        <div id="google-apps">Apps</div>
-        <div id="messages">Mesages</div>
-        <div id="bell">Notification Bell</div>
-        <div id="profile">Profile Picture</div>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <div class="left">
-      <div class='video-container'>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/zuJV-DAv_wE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <main>
+      <div class="left">
+        <div class='video-container'>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/zuJV-DAv_wE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+        <div class='comments'>
+          <div class="comment">Comment Goes Here</div>
+          <div class="comment">Comment Goes Here</div>
+          <div class="comment">Comment Goes Here</div>
+          <div class="comment">Comment Goes Here</div>
+        </div>
       </div>
-      
-      <div class='comments'>
-        <div class="comment">Comment Goes Here</div>
-        <div class="comment">Comment Goes Here</div>
-        <div class="comment">Comment Goes Here</div>
-        <div class="comment">Comment Goes Here</div>
-      </div>
-    </div>
-    <div class="right">
-      <aside>
-        Side-Bar
-      </aside>    
-    </div>  
-  </main>
-</body>
+      <div class="right">
+        <aside>
+          Side-Bar
+        </aside>    
+      </div>  
+    </main>
+  </body>
 </html>
