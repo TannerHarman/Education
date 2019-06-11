@@ -21,8 +21,8 @@ header > .nav {
 }
 
 .nav > * > * {
-  padding-left: 2.5px;
-  padding-right: 2.5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
 }
 
 .nav > * > .icon {
@@ -30,8 +30,8 @@ header > .nav {
   height: auto;
 }
 
-.nav > .center {
-  width: 35vw;
+.nav > * > .icon:hover {
+  cursor: pointer;
 }
 
 .nav > .center > * {
@@ -39,7 +39,7 @@ header > .nav {
   margin: 0px;
 }
 .nav > .center input {
-  width: 100%;
+  width: 35vw;
   height: 33px;
 }
 
@@ -54,16 +54,30 @@ header > .nav {
   width: auto;
 }
 
+/* Main Body */
+
 main {
-  margin-top: 100px;
+  margin: 100px 25px;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  grid-gap: 25px;
+  max-width: 1800px;
+}
+
+main > .left {
+  display: grid;
+  grid-gap: 25px;
 }
 
 .video-container {
   overflow: hidden;
   padding-top: 56.25%;
   position: relative;
+}
+
+.video-wrapper {
+  padding-bottom: 25px;
+  border-bottom: 1px solid black;
 }
 
 .video-container > iframe {
@@ -73,4 +87,27 @@ main {
   position: absolute;
   top:0;
   width: 100%;
+}
+
+.video-wrapper > .video-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+}
+
+.video-details > .video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-details > .video-info > * {
+  margin: 5px;
+}
+
+.video-details > .video-stats {
+  display: flex;
+}
+
+.video-details > .video-stats > * {
+  padding: 0px 2.5px;
 }
