@@ -1,0 +1,74 @@
+html {
+  background-color: #EBEDF0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: minmax(100px, auto) auto minmax(100px, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh;
+  align-items: center;
+}
+
+header {
+  display: grid;
+  justify-content: end;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.main-wrapper {
+  max-width: 400px;
+  height: auto;
+}
+
+.form {
+  background-color: #fbfbfb;
+  border: 1px solid black;
+  max-width: 400px;
+  height: 700px;
+  padding: 30px;
+
+  display: grid;
+  justify-items: center;
+}
+
+.form > .email-input,
+.form > .phone-input,
+.form > .password-input,
+.form > .button-input { 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.button-input > input {
+  height: 50px;
+  background-color: #0077C5;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.form h1,
+.form > .one-account,
+.form > .form-agreement,
+.form > .recaptcha {
+  text-align: center;
+}
+
+.form-agreement, .recaptcha {
+  align-self: end;
+}
+
+footer {
+  display: grid;
+}
