@@ -39,7 +39,7 @@ main {
 }
 
 .main-wrapper {
-  max-width: 400px;
+  max-width: 410px;
   height: auto;
 }
 
@@ -52,8 +52,8 @@ main {
   background-color: #fbfbfb;
   border: 1px solid #c7c7c7;
   border-radius: 2px;
-  height: 700px;
-  padding: 30px;
+  min-height: 600px;
+  padding: 40px;
 
   display: grid;
   justify-items: center;
@@ -73,6 +73,10 @@ main {
   position: absolute;
   right: 10px;
   top: 27px;
+}
+
+.password-input > input {
+  padding-right: 40px;
 }
 
 .form > * > input {
