@@ -14,9 +14,22 @@ body {
   align-items: center;
 }
 
-header {
-  display: grid;
-  justify-content: end;
+header > .sign-in {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sign-in > .sign-in-text > * {
+  padding: 0px;
+  margin: 0px 20px;
+  text-align: center;
+}
+
+.sign-in > .button {
+  background-color: #0077C5;
+  padding: 10px 25px;
+  border-radius: 5px;
 }
 
 main {
@@ -30,10 +43,15 @@ main {
   height: auto;
 }
 
+.form > * {
+  padding: 0px;
+  margin: 0px;
+}
+
 .form {
   background-color: #fbfbfb;
-  border: 1px solid black;
-  max-width: 400px;
+  border: 1px solid #c7c7c7;
+  border-radius: 2px;
   height: 700px;
   padding: 30px;
 
@@ -48,6 +66,20 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
+}
+
+.password-input > .fa-lock-open {
+  position: absolute;
+  right: 10px;
+  top: 27px;
+}
+
+.form > * > input {
+  background-color: white;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
 }
 
 .button-input > input {
