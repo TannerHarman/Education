@@ -10,7 +10,7 @@ body {
     "header"
     "main"
     "footer";
-  min-height: 100vh;
+  min-height: 100vh;http://127.0.0.1:5500/index.html
   align-items: center;
 }
 
@@ -53,7 +53,7 @@ main {
   border: 1px solid #c7c7c7;
   border-radius: 2px;
   min-height: 600px;
-  padding: 40px;
+  padding:40px 40px 0px 40px;
 
   display: grid;
   justify-items: center;
@@ -105,6 +105,60 @@ main {
   align-self: end;
 }
 
+.recaptcha {
+  align-self: end;
+  padding: 10px 0px;
+  background-color: #ECEEF1;
+  width: calc(100% + 80px);
+}
+
 footer {
   display: grid;
+  justify-items: center;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+}
+
+footer > .links {
+  display: grid;
+  width: 100%;
+}
+
+ul {
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-self: center;
+}
+
+ul li {
+  list-style: none;
+  padding: 5px;
+  margin: 0px;
+  text-align: center;
+}
+
+.notice {
+  display: flex;
+  text-align: center;
+  display: felx;
+  justify-content: space-around;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+p,
+a,
+label {
+  font-size : .8em;
+}
+
+footer > a,
+footer > p,
+li {
+  font-size: .6em;
 }
