@@ -8,17 +8,21 @@ body {
   display: grid;
   margin: auto;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-areas: 
-    'h h h'
-    '. b .'
-    'f f f';
+  grid-template-areas:
+    '. b .';
 }
 
 header {
   grid-area: h;
-  border-bottom: 1px solid black;
   padding: 10px 0px;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  border-bottom: 1px solid #e2e2e2;
+  box-shadow: 0 3px 3px rgba(238, 238, 238, 0.6);
 }
 
 header > nav {
@@ -40,11 +44,40 @@ nav > * > img {
 
 main {
   grid-area: b;
-  margin: 20px;
+  margin: 100px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 10px 50px;
+  grid-template-areas: 
+    '. title .'
+    'head head head'
+    'lside article rside';
 }
 
+main > h1 {
+  grid-column: title;
+}
+
+main > img {
+  grid-column: head;
+
+  display: grid;
+  justify-items: center;
+}
+
+main > * {
+  grid-column: article;
+  display: grid;
+}
+main > .side-bar {
+  grid-column: rside;
+  grid-row: span 5;
+}
+
+
 section > .photo > img,
-main > .heading > img,
+main > img,
 .telescope-picture > img {
-  width: 50%;
+  width: 100%;
 }
