@@ -1,0 +1,50 @@
+* {
+ padding:0px;
+ margin: 0px;
+ line-height: 1.8em;
+}
+
+body {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-areas: 
+    'h h h'
+    '. b .'
+    'f f f';
+}
+
+header {
+  grid-area: h;
+  border-bottom: 1px solid black;
+  padding: 10px 0px;
+  position: fixed;
+}
+
+header > nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 20px;
+}
+
+header > nav > * {
+  display: flex;
+  justify-content: center;
+  grid-gap: 15px;
+}
+
+nav > * > img {
+  width: 20px;
+}
+
+main {
+  grid-area: b;
+  margin: 20px;
+}
+
+section > .photo > img,
+main > .heading > img,
+.telescope-picture > img {
+  width: 50%;
+}
