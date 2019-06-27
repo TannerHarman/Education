@@ -7,7 +7,7 @@
 body {
   display: grid;
   margin: auto;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 10fr 1fr;
   grid-template-areas:
     '. b .';
 }
@@ -29,7 +29,9 @@ header > nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0px 20px;
+  margin: 0px auto;
+  max-width: 1650px;
+  padding: 0px 20px;
 }
 
 header > nav > * {
@@ -47,8 +49,8 @@ main {
   margin: 100px auto;
 
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-gap: 10px 50px;
+  grid-template-columns: 1fr minmax(400px, 700px) 1fr;
+  grid-gap: 5px 40px; 
   grid-template-areas: 
     '. title .'
     'head head head'
@@ -70,14 +72,33 @@ main > * {
   grid-column: article;
   display: grid;
 }
+
 main > .side-bar {
   grid-column: rside;
-  grid-row: span 5;
+  grid-row: span 4;
+  align-content: center;
+  justify-items: center;
+}
+
+main > .theory-of-inflation {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+main > .theory-of-inflation > section{
+  margin-top: 75px;
+}
+
+main > .theory-of-inflation > h1,
+main > .theory-of-inflation > p,
+main > .theory-of-inflation > .photo {
+  grid-column: 1 / -1;
 }
 
 
-section > .photo > img,
 main > img,
+.photo > img,
 .telescope-picture > img {
   width: 100%;
 }
