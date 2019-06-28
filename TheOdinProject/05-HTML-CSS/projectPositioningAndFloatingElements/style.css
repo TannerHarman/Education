@@ -81,24 +81,36 @@ main > .side-bar {
 }
 
 main > .theory-of-inflation {
+  justify-self: center;
+  justify-content: center;
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 275px));
+  grid-gap: 20px;
+  padding: 50px;
+  max-width: 1200px;
 }
 
-main > .theory-of-inflation > section{
-  margin-top: 75px;
+main > .theory-of-inflation > section {
+  display: flex;
+  flex-direction: column;
 }
+
+
+main > .theory-of-inflation > section > img {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
 
 main > .theory-of-inflation > h1,
-main > .theory-of-inflation > p,
-main > .theory-of-inflation > .photo {
+main > .theory-of-inflation > p {
   grid-column: 1 / -1;
 }
 
 
 main > img,
-.photo > img,
+section > .photo > img,
 .telescope-picture > img {
   width: 100%;
 }
