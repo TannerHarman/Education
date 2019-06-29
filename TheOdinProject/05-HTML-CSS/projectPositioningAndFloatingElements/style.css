@@ -96,18 +96,60 @@ main > .theory-of-inflation > section {
   flex-direction: column;
 }
 
+.explanation > .title {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.explanation {
+  font-size: .8em;
+}
 
 main > .theory-of-inflation > section > img {
   width: 100%;
   padding-bottom: 10px;
 }
 
+.video {
+  margin-top: 40px;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.video > iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top:0;
+  width: 100%;
+}
+
+.video-caption {
+  margin-bottom: 40px;
+  font-size: .8em;
+}
 
 main > .theory-of-inflation > h1,
-main > .theory-of-inflation > p {
+main > .theory-of-inflation > p,
+main > .theory-of-inflation > #border,
+.telescope-picture {
   grid-column: 1 / -1;
 }
 
+main > .theory-of-inflation > #border {
+  width: 83px;
+  height:1px;
+  background-color: black;
+}
+
+.telescope-picture {
+  padding: 40px;
+  width: 75%;
+  justify-self: center;
+  font-size: .8em;
+}
 
 main > img,
 section > .photo > img,
