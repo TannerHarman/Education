@@ -4,6 +4,23 @@
  line-height: 1.8em;
 }
 
+button {
+  padding: 11px 12px 8px;
+  background-color: #326891;
+  border: 1px solid #326891;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 11px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  border: 1px solid #326891;
+}
 body {
   display: grid;
   margin: auto;
@@ -50,7 +67,7 @@ main {
 
   display: grid;
   grid-template-columns: 1fr minmax(400px, 700px) 1fr;
-  grid-gap: 5px 40px; 
+  grid-gap: 20px 40px; 
   grid-template-areas: 
     '. title .'
     'head head head'
@@ -68,9 +85,31 @@ main > img {
   justify-items: center;
 }
 
+main > .photo-descript {
+  grid-column: 1 / -2;
+  font-size: .8em;
+  margin-bottom: 20px;
+}
+
+.credit {
+  color: #888;
+}
+
 main > * {
   grid-column: article;
-  display: grid;
+}
+
+main > p {
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #333;
+} 
+
+main > .section-title {
+  font-weight: 700;
+  color: #333;
 }
 
 main > .side-bar {
@@ -78,6 +117,25 @@ main > .side-bar {
   grid-row: span 4;
   align-content: center;
   justify-items: center;
+}
+
+main > .side-bar > .title {
+  font-style: normal;
+  font-weight: 700;
+}
+
+main > .side-bar > .sell {
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 0px;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  color: rgb(102, 102, 102);
+  padding: 10px 0px;
+}
+
+main > .side-bar > button {
+  width: 100%;
 }
 
 main > .theory-of-inflation {
@@ -89,6 +147,44 @@ main > .theory-of-inflation {
   grid-gap: 20px;
   padding: 50px;
   max-width: 1200px;
+}
+
+.editors-picks > h1 {
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(226, 226, 226);
+  margin-top: 0px;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+}
+
+.editors-picks > .pick {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.editors-picks > .pick > p {
+  font-weight: 500;
+  border-bottom: medium none;
+  padding-bottom: 0px;
+  font-size: 14px;
+  line-height: 17px;
+  border-bottom: medium none;
+  padding-bottom: 10px;
+  align-self: center;
+  justify-self: center;
+}
+
+.editors-picks > .pick > img {
+  height: 75px;
+  width: 75px;
+  padding-right: 10px;
+  justify-self: center;
+  align-self: center;
 }
 
 main > .theory-of-inflation > section {
@@ -149,6 +245,19 @@ main > .theory-of-inflation > #border {
   width: 75%;
   justify-self: center;
   font-size: .8em;
+}
+
+main > .paper-edition-notice {
+  color: #999;
+  font-size: .6em;
+}
+
+.social {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main > img,
