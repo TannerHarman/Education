@@ -1,0 +1,70 @@
+body {
+  background: #fff;
+}
+
+.wrapper {
+  padding: 0px 5em;
+}
+main {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  background: url(images/your_verse_hero.jpg);
+  background-position: center bottom;
+}
+
+
+ul {
+  max-width: 980px;
+  height: 36px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0px auto;
+}
+
+li {
+  width: auto;
+  width: 100%;
+}
+
+#logo, #store, #Mac, #iPod, #iPhone, #iPad, #iTunes, #Support {
+  background: url(images/globalnav_text.svg) no-repeat 50% 0;
+  overflow: hidden;
+}
+
+#logo {
+  background-position: 50% 0px;
+}
+#store {
+  background-position: 50% -30px;
+}
+
+#Mac {
+  background-position: 50% -60px;
+}
+
+#iPod {
+  background-position: 50% -90px;
+}
+
+#iPhone {
+  background-position: 50% -120px;
+}
+
+#iPad {
+  background-position: 50% -150px;
+}
+
+#iTunes {
+  background-position: 50% -180px;
+}
+
+#Support {
+  background-position: 50% -210px;
+}
+
+#Search > input {
+  width: 100%;
+  border-radius: 20px;
+  background: transparent;
+}
