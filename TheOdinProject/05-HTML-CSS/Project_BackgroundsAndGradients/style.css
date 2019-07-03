@@ -4,21 +4,35 @@ body {
 
 .wrapper {
   padding: 0px 5em;
-}
-main {
-  display: grid;
-  grid-template-rows: repeat(7, 1fr);
-  background: url(images/your_verse_hero.jpg);
-  background-position: center bottom;
+  min-width: 900px;
+  max-width: 1440px;
+  margin: 0px auto;
 }
 
+main {
+  background: url(images/your_verse_hero.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding: 60px 20px 0px 20px;
+  height: 60vh;
+}
+
+main > * {
+  margin: 25px auto;
+  text-align: center;
+}
 
 ul {
   max-width: 980px;
   height: 36px;
   display: flex;
   justify-content: space-around;
+  padding: 0px 10px;
   align-content: center;
+  background: linear-gradient( #737373, #5E5E5E 50%, #707070 50%, #8D8D8D);
+  border: 1px solid #686868;
+  border-radius: 5px;
+  background-color: #686868;
   margin: 0px auto;
 }
 
@@ -30,41 +44,90 @@ li {
 #logo, #store, #Mac, #iPod, #iPhone, #iPad, #iTunes, #Support {
   background: url(images/globalnav_text.svg) no-repeat 50% 0;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #484848;
 }
 
 #logo {
-  background-position: 50% 0px;
+  background-position: 50% 2px;
 }
 #store {
-  background-position: 50% -30px;
+  background-position: 50% -27px;
 }
 
 #Mac {
-  background-position: 50% -60px;
+  background-position: 50% -57px;
 }
 
 #iPod {
-  background-position: 50% -90px;
+  background-position: 50% -87px;
 }
 
 #iPhone {
-  background-position: 50% -120px;
+  background-position: 50% -117px;
 }
 
 #iPad {
-  background-position: 50% -150px;
+  background-position: 50% -147px;
 }
 
 #iTunes {
-  background-position: 50% -180px;
+  background-position: 50% -177px;
 }
 
 #Support {
-  background-position: 50% -210px;
+  background-position: 50% -207px;
+}
+
+#Search {
+  align-self: center;
+  margin-bottom: 2px;
 }
 
 #Search > input {
   width: 100%;
   border-radius: 20px;
   background: transparent;
+}
+
+h1, h2, p {
+  color: white;
+  font-weight: 100px;
+  margin-top: 25px;
+}
+
+h1 {
+  font-size: 60px;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 20px;
+}
+
+aside {
+  margin-top: 2px;
+  grid-gap: 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+aside > img {
+  height: 25vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  aside {
+    margin-top: 2px;
+    grid-gap: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
