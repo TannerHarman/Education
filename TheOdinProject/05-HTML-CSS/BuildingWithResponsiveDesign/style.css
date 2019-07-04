@@ -1,0 +1,105 @@
+nav {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  box-shadow: 0 0 32px rgba(0,0,0,.15);
+}
+
+nav > * {
+  padding: 14px 14px;
+}
+
+nav > .fas {
+  font-size: 20px;
+  border-left: 1px solid rgba(0,0,0,.15);
+  margin: 0px;
+}
+
+.fa-search {
+  color: rgba(0,0,0,.15);
+}
+
+.fa-bars {
+  color: #f42;
+}
+
+nav > img {
+  justify-self: start;
+  background: linear-gradient(to bottom right,#c09,#f42 85%);
+  padding: 16px 20px;
+  background-size: auto;
+  width: 66px;
+  height: 16px;
+}
+
+body > .cover {
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.cover > .cover-story {
+  height: 28.65vh;
+  position: relative;
+}
+
+.cover-story > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cover-wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  background: linear-gradient( rgba(0,0,0,0), rgba(0, 0, 0, 0.9));
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-items: end;
+}
+
+.cover-header {
+  display: grid;
+  grid-gap: 10px;
+  align-items: end;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.cover-header > .head {
+  text-transform: uppercase;
+}
+
+.cover-header > .cover-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cover-header > .cover-byline {
+  color: hsla(0,0%,100%,.6);
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+}
+
+.cover-byline li {
+  margin: 0px 4px;
+}
+
+.cover-byline > li a{
+  text-decoration: none;
+  color: hsla(0,0%,100%,.6);
+}
+
+.cover-byline > li > .fas,
+.cover-byline > li > .far {
+  font-size: 15px;
+}
