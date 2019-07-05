@@ -58,7 +58,7 @@ body > .cover {
   left: 0;
   bottom: 0;
   z-index: 3;
-  background: linear-gradient( rgba(0,0,0,0), rgba(0, 0, 0, 0.9));
+  background: linear-gradient( rgba(0,0,0, 0.20), rgba(0, 0, 0, 1));
   height: 100%;
   width: 100%;
   display: grid;
@@ -67,11 +67,11 @@ body > .cover {
 
 .cover-header {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 5px;
   align-items: end;
   color: white;
   margin-left: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .cover-header > .head {
@@ -102,4 +102,48 @@ body > .cover {
 .cover-byline > li > .fas,
 .cover-byline > li > .far {
   font-size: 15px;
+}
+
+.main-wrapper {
+  margin: 50px 20px;
+}
+
+.latest-article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px;
+  justify-items: start;
+  align-items: start;
+  margin: 10px 0px;
+}
+
+.section-title {
+  color: #f42;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-bottom: 30px;
+  background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23F42" stroke-width="3" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position-x: 170px;
+  background-position-y: 75%;
+}
+
+.latest-article img {
+  grid-row: 1 /-1;
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.latest-article > .article-title {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.latest-article > .article-details {
+  font-size: 10px;
 }
