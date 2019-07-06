@@ -146,7 +146,7 @@ section {
   height: 16px;
   margin-left: 4px;
   position: relative;
-  top: 2px;
+  top: 0;
   width: 16px;
 }
 
@@ -309,4 +309,49 @@ section {
   position: absolute;
   top: 43%;
   width: 5px;
+}
+
+.latest-deals {
+  display: grid;
+  grid-gap: 15px;
+}
+
+.latest-deals > .latest-deals-title,
+.latest-deals > .link {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.latest-deals > .link {
+  justify-self: end;
+}
+
+.latest-deal {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+}
+
+.latest-deal img {
+  grid-row: 1 / -1;
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
+}
+
+.latest-deal h3 {
+  margin-top: 1px;
+  font-weight: bold;
+}
+
+.regular {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.sale {
+  color: #555;
 }
