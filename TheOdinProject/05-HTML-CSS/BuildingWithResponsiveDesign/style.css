@@ -105,7 +105,11 @@ body > .cover {
 }
 
 .main-wrapper {
-  margin: 50px 20px;
+  margin: 0px 20px; 
+}
+  
+section {
+  margin: 60px 0px;
 }
 
 .latest-article {
@@ -123,11 +127,18 @@ body > .cover {
   font-weight: bolder;
   font-size: 25px;
   margin-bottom: 30px;
-  background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23F42" stroke-width="3" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
-  background-repeat: no-repeat;
+}
+
+.section-title::after {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23F42" stroke-width="3" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
   background-size: 16px 16px;
-  background-position-x: 170px;
-  background-position-y: 75%;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  margin-left: 4px;
+  position: relative;
+  top: 2px;
+  width: 16px;
 }
 
 .latest-article img {
@@ -146,4 +157,78 @@ body > .cover {
 
 .latest-article > .article-details {
   font-size: 10px;
+}
+
+
+
+.deals-links,
+.deal {
+  display: flex;
+  flex-direction: column;
+}
+
+.deal {
+  position: relative;
+}
+
+.link {
+  color: #f42;
+  text-decoration: none;
+  margin: 6px 0px;
+}
+
+.deal {
+  margin: 20px 5px;
+}
+
+.deal > img {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  padding: 10px;
+  top: 0;
+}
+
+.deal > .deal-title,
+.deal > .price {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #f42;
+  color: white;
+  padding: 11px 16px 11px 84px;
+}
+
+.deal > .price,
+.deal > .round {
+  background-color: rgba(255,68,34,.08);
+  padding: 10.5px 16px 0px 84px;
+  color: black;
+}
+
+.deal > .round {
+  padding-top: 5px;
+  padding-bottom: 11px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.deal > .investment-bit,
+.deal > .deal-byline {
+  background-color: #FFFAF8;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,68,34,.25);
+  font-size: 14px;
+}
+
+.investment-bit > .bit {
+  margin: 10px;
+}
+
+.deal > .deal-byline {
+  border-bottom: none;
+  font-size: 12px;
+}
+
+.deal > .deal-byline > p > span {
+  color: grey;
 }
