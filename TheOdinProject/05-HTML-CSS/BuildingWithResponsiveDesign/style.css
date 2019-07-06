@@ -41,19 +41,22 @@ body > .cover {
   grid-gap: 10px;
 }
 
-.cover > .cover-story {
+.cover > .cover-story,
+.topic-highlight {
   height: 28.65vh;
   position: relative;
 }
 
-.cover-story > img {
+.cover-story > img,
+.topic-highlight > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.cover-wrapper {
+.cover-wrapper,
+.topic-wrapper {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -65,36 +68,42 @@ body > .cover {
   align-items: end;
 }
 
-.cover-header {
+.cover-header,
+.topic-header {
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 8px;
   align-items: end;
   color: white;
   margin-left: 10px;
   margin-bottom: 15px;
 }
 
-.cover-header > .head {
+.head {
   text-transform: uppercase;
+  font-size: 12px;
 }
 
-.cover-header > .cover-title {
+.cover-header > .cover-title,
+.topic-header > .topic-title {
   font-size: 20px;
   font-weight: 700;
 }
 
-.cover-header > .cover-byline {
+.cover-header > .cover-byline,
+.topic-header > .topic-byline {
   color: hsla(0,0%,100%,.6);
   font-size: 12px;
   line-height: 16px;
   display: flex;
 }
 
-.cover-byline li {
-  margin: 0px 4px;
+.cover-byline li,
+.topic-byline li {
+  margin: 0px 10px 0px 0px;
 }
 
-.cover-byline > li a{
+.cover-byline li a,
+.topic-byline li a{
   text-decoration: none;
   color: hsla(0,0%,100%,.6);
 }
@@ -158,8 +167,6 @@ section {
 .latest-article > .article-details {
   font-size: 10px;
 }
-
-
 
 .deals-links,
 .deal {
@@ -231,4 +238,75 @@ section {
 
 .deal > .deal-byline > p > span {
   color: grey;
+}
+
+.topics {
+  display: grid;
+  grid-gap: 30px;
+}
+
+.topic-highlight {
+  height: 400px;
+  color: white;
+}
+
+.topic-lowlight {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  background-color: #FFFAF8;
+  grid-gap: 7px;
+}
+
+.topic-lowlight img {
+  grid-column: -2 / -1;
+  grid-row: 1 / -1;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+}
+
+.diff > img {
+  object-position: right bottom;
+}
+
+.topic-lowlight p,
+.topic-lowlight h3 {
+  margin-left: 15px;
+  color: #f42;
+}
+
+.topic-lowlight h3 {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.topic-lowlight p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.topic-articles {
+  display: grid;
+  font-size: 13px;
+}
+
+.topic-articles p {
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 12px;
+  margin: 0px;
+}
+
+.topic-articles p::before {
+  background-color: #f42;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 43%;
+  width: 5px;
 }
