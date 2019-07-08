@@ -35,10 +35,10 @@ nav > img {
 }
 
 body > .cover {
-  padding: 8px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
+  margin: 0px auto;
 }
 
 .cover > .cover-story,
@@ -112,23 +112,9 @@ body > .cover {
 .cover-byline > li > .far {
   font-size: 15px;
 }
-
-.main-wrapper {
-  margin: 0px 20px; 
-}
   
 section {
-  margin: 60px 0px;
-}
-
-.latest-article {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-  grid-gap: 10px;
-  justify-items: start;
-  align-items: start;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 .section-title {
@@ -148,6 +134,16 @@ section {
   position: relative;
   top: 0;
   width: 16px;
+}
+
+.latest-article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px;
+  justify-items: start;
+  align-items: start;
+  margin: 10px 0px;
 }
 
 .latest-article img {
@@ -227,6 +223,10 @@ section {
   font-size: 14px;
 }
 
+.last-deal {
+  display: none;
+}
+
 .investment-bit > .bit {
   margin: 10px;
 }
@@ -246,7 +246,7 @@ section {
 }
 
 .topic-highlight {
-  height: 400px;
+  height: 55%;
   color: white;
 }
 
@@ -319,7 +319,7 @@ section {
 .latest-deals > .latest-deals-title,
 .latest-deals > .link {
   grid-row-start: 1;
-  grid-column-start: 1;
+  grid-column: 1 / -1;
 }
 
 .latest-deals > .link {
@@ -401,4 +401,162 @@ footer > .legal {
 
 .legal p {
   margin: 2.5px;
+}
+
+@media (min-width: 768px) {
+
+  .section-title {
+    grid-column: 1 / -1;
+  }
+  
+  body > .cover {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 400px;
+  }
+
+  .cover > .cover-story {
+    grid-column: 2 / -2;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cover > .primary-story {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
+
+  .main-wrapper > .latest {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+
+  .latest-article {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .latest-article img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .latest-article > .article-title {
+    margin-top: -3px;
+  }
+
+  .main-wrapper > .deals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main-wrapper > .deals > .deals-links {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+  }
+
+  .main-wrapper > .deals > .deals-links a:nth-child(-n+2)::after {
+    content: '|';
+    margin: 0px 10px;
+    font-weight: bolder;
+  }
+
+  .main-wrapper > .topics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .topic-highlight {
+    height: 40%;
+  }
+
+  .main-wrapper > .latest-deals {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .latest-deals > .latest-deal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .latest-deal > img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer > .legal {
+    flex-direction: row;
+    align-items: center;
+  } 
+
+  footer > .legal p {
+    margin: 0px 3px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body > .cover {
+    height: 400px;
+  }
+
+  .cover > .primary-story h2 {
+    font-size: 45px;
+  }
+
+  .main-wrapper > .latest {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .last-deal {
+    display: inline;
+  }
+
+  .main-wrapper > .deals {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+
+  .main-wrapper > .deals > .deals-links,
+  .main-wrapper > .deals > .deals-title {
+    grid-row-start: 1;
+    grid-column: 1/-1;
+  } 
+  
+  .main-wrapper > .deals > .deals-links {
+    justify-items: end;
+    grid-row-start: 1;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+  }
+
+  .main-wrapper > .deals > .deals-links a:nth-child(-n+2)::after {
+    content: '|';
+    margin: 0px 10px;
+    font-weight: bolder;
+  }
+
+  .main-wrapper > .topics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .topic-highlight {
+    height: 36%;
+  }
+
+  .main-wrapper > .latest-deals {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .main-wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+  }
 }
