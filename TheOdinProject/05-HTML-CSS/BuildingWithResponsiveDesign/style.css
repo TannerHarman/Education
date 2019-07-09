@@ -414,7 +414,7 @@ footer > .legal {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
-    height: 30vh;
+    height: 53vh;
   }
   
   .cover > .cover-story {
@@ -426,7 +426,7 @@ footer > .legal {
   .cover-header {
   margin-left: 10px;
   margin-bottom: 15px;
-}
+  }
 
   .cover > .primary-story {
     grid-column: 1 / -2;
@@ -512,9 +512,8 @@ footer > .legal {
 
 @media (min-width: 1024px) {
   body > .cover {
-    height: 45vh;
+    height: 57vh;
   }
-
   .cover > .primary-story h2 {
     font-size: 45px;
   }
