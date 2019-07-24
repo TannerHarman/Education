@@ -1,11 +1,4 @@
-let myLibrary = [
-  {
-    title: 'Penis',
-    author: 'Penis',
-    pages: 69,
-    status: 'Read',
-  }
-];
+let myLibrary = [];
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -14,22 +7,7 @@ function Book(title, author, pages, read) {
   this.status = read;
 };
 
-Book.prototype.info = function() {
-  return `${this.title}, ${this.author}, ${this.pages}, ${this.read}`;
-}
-
-function addBookToLibrary() {
-  let bookTitle = document.querySelector('.form-title').lastElementChild.value;
-  let bookAuthor = document.querySelector('.form-author').lastElementChild.value;
-  let bookLength = document.querySelector('.form-pages').lastElementChild.value;
-  let bookStatus = document.querySelector('.form-status').lastElementChild.value;
-  let finalBook = Book(bookTitle, bookAuthor, bookLength, bookStatus);
-
-  myLibrary.push(finalBook.info());
-  console.log(myLibrary);
-};
-
-myLibrary.forEach((book) => {
+function displayBooks(book) {
   const bookList = document.querySelector('#book-list');
 
   const bookDiv = document.createElement('div');
@@ -55,7 +33,21 @@ myLibrary.forEach((book) => {
   bookStatus.classList.add('status');
   bookStatus.textContent = `Status: ${book.status}`
   bookDiv.appendChild(bookStatus);
-});
+};
 
-submit = document.querySelector('button');
-submit.onclick = addBookToLibrary();
+function addBookToLibrary(e) {
+  e.preventDefault()
+  
+  let bookTitle = document.querySelector('.form-title').lastElementChild.value;
+  let bookAuthor = document.querySelector('.form-author').lastElementChild.value;
+  let bookLength = document.querySelector('.form-pages').lastElementChild.value;
+  let bookStatus = document.querySelector('.form-status').lastElementChild.value;
+  
+  let finalBook = new Book(bookTitle, bookAuthor, bookLength, bookStatus);
+
+  myLibrary.push(finalBook);
+  displayBooks(myLibrary.pop());
+};
+
+let submit = document.querySelector('button');
+submit.addEventListener('click', addBookToLibrary); 
