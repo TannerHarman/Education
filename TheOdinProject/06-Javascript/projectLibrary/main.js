@@ -1,5 +1,12 @@
 let myLibrary = [];
 
+let submit = document.querySelector('button');
+submit.addEventListener('click', addBookToLibrary);
+
+let removeBookDiv = document.querySelector('#book-list');
+removeBookDiv.addEventListener('click', removeBook);
+
+
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -33,15 +40,24 @@ function displayBooks(book) {
   bookStatus.classList.add('status');
   bookStatus.textContent = `Status: ${book.status}`
   bookDiv.appendChild(bookStatus);
+
+  const removeBtn = document.createElement('button');
+  removeBtn.className = 'delete-button';
+  removeBtn.textContent = 'x';
+  bookDiv.appendChild(removeBtn);
 };
 
 function addBookToLibrary(e) {
   e.preventDefault()
   
-  let bookTitle = document.querySelector('.form-title').lastElementChild.value;
-  let bookAuthor = document.querySelector('.form-author').lastElementChild.value;
-  let bookLength = document.querySelector('.form-pages').lastElementChild.value;
-  let bookStatus = document.querySelector('.form-status').lastElementChild.value;
+  let bookTitle = document.querySelector('#title').value;
+  let bookAuthor = document.querySelector('#author').value;
+  let bookLength = document.querySelector('#length').value;
+  let bookStatus = 'Not Read';
+
+  if (document.querySelector('#status').checked == true) {
+    bookStatus = 'Read';
+  };
   
   let finalBook = new Book(bookTitle, bookAuthor, bookLength, bookStatus);
 
@@ -49,5 +65,11 @@ function addBookToLibrary(e) {
   displayBooks(myLibrary.pop());
 };
 
-let submit = document.querySelector('button');
-submit.addEventListener('click', addBookToLibrary); 
+function removeBook(e) {
+  if(e.target.classList.contains('delete-button')) {
+    if(confirm('Are you Sure?')){
+      let book = e.target.parentElement;
+      removeBookDiv.removeChild(book);
+    }
+  };
+}
