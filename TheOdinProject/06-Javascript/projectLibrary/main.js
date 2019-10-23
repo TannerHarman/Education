@@ -12,6 +12,10 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.status = read;
+
+  this.info = function() {
+    return [title, author, pages, read]
+  }
 };
 
 function displayBooks(book) {
@@ -45,6 +49,8 @@ function displayBooks(book) {
   removeBtn.className = 'delete-button';
   removeBtn.textContent = 'x';
   bookDiv.appendChild(removeBtn);
+
+  console.log(book.info());
 };
 
 function addBookToLibrary(e) {
