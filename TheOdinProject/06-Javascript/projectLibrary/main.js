@@ -1,10 +1,23 @@
-let myLibrary = [];
+let myLibrary = JSON.parse(localStorage.getItem('books')) || [];
 
 let submit = document.querySelector('button');
-submit.addEventListener('click', addBookToLibrary);
+let bookList = document.querySelector('#book-list');
 
-let removeBookDiv = document.querySelector('#book-list');
-removeBookDiv.addEventListener('click', removeBook);
+(() => {
+  bookPreload = myLibrary.map((book) => {
+    return displayBooks(book);
+  }).join('');
+
+  bookList.innerHTML = bookPreload;
+})();
+
+submit.addEventListener('click', (e) => {
+  addBookToLibrary(e);
+  displayBooks(myLibrary[myLibrary.length-1]);
+  localStorage.setItem('books', JSON.stringify(myLibrary));
+});
+
+bookList.addEventListener('click', removeBook);
 
 
 function Book(title, author, pages, read) {
@@ -12,45 +25,19 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.status = read;
-
-  this.info = function() {
-    return [title, author, pages, read]
-  }
+  this.id = Math.round(Math.random() * 1000);
 };
 
 function displayBooks(book) {
-  const bookList = document.querySelector('#book-list');
-
-  const bookDiv = document.createElement('div');
-  bookDiv.classList.add('book');
-  bookList.appendChild(bookDiv);
-
-  const bookTitle = document.createElement('div');
-  bookTitle.classList.add('title');
-  bookTitle.textContent = `Title: ${book.title}`
-  bookDiv.appendChild(bookTitle);
-
-  const bookAuthor = document.createElement('div');
-  bookAuthor.classList.add('author');
-  bookAuthor.textContent = `author: ${book.author}`
-  bookDiv.appendChild(bookAuthor);
-
-  const bookPages = document.createElement('div');
-  bookPages.classList.add('pages');
-  bookPages.textContent = `Pages: ${book.pages}`
-  bookDiv.appendChild(bookPages);
-
-  const bookStatus = document.createElement('div');
-  bookStatus.classList.add('status');
-  bookStatus.textContent = `Status: ${book.status}`
-  bookDiv.appendChild(bookStatus);
-
-  const removeBtn = document.createElement('button');
-  removeBtn.className = 'delete-button';
-  removeBtn.textContent = 'x';
-  bookDiv.appendChild(removeBtn);
-
-  console.log(book.info());
+  return bookList.innerHTML  = `
+  <div data-id='${book.id}' class="book">
+    <div class="title">Book: ${book.title}</div>
+    <div class="author">Author: ${book.author}</div>
+    <div class="pages">Length: ${book.pages}</div>
+    <div class="status">Status: ${book.status}</div>
+    <button class="delete-button">Remove Book</button>
+  </div>
+  `
 };
 
 function addBookToLibrary(e) {
@@ -68,14 +55,21 @@ function addBookToLibrary(e) {
   let finalBook = new Book(bookTitle, bookAuthor, bookLength, bookStatus);
 
   myLibrary.push(finalBook);
-  displayBooks(myLibrary.pop());
+  localStorage.setItem('books', JSON.stringify(myLibrary));
 };
 
 function removeBook(e) {
   if(e.target.classList.contains('delete-button')) {
     if(confirm('Are you Sure?')){
       let book = e.target.parentElement;
-      removeBookDiv.removeChild(book);
+      bookList.removeChild(book);
+
+      updatedLib = myLibrary.filter((storedBook) => {
+        storedBook.id != Number(book.dataset.id)
+      })
+      console.log(updatedLib);
+      myLibray = updatedLib;
+      console.log(myLibrary);
     }
   };
 }

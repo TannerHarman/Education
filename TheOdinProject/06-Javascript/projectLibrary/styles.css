@@ -12,20 +12,20 @@ body {
 }
 
 body form {
-display: grid;
-grid-template-columns: repeat(4, auto);
-place-items: center;
-place-content: center;
-grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  place-items: center;
+  place-content: center;
+  grid-gap: 20px;
 
-width: 100%;
-background-color: skyblue;
-padding-bottom: 10px;
+  width: 100%;
+  background-color: skyblue;
+  padding-bottom: 10px;
 }
 
 form h1,
 form button {
-grid-column: 1 / -1 ;
+  grid-column: 1 / -1 ;
 }
 
 .form-title,
@@ -47,19 +47,22 @@ grid-column: 1 / -1 ;
 }
 
 #book-list {
-box-sizing: border-box;
-border: 1px solid black;
-padding: 10px;
-margin: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 
-display: grid;
-grid-template-columns: repeat(auto-fit, 150px);
-grid-gap: 13px;
-justify-content: center;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 150px);
+  grid-gap: 13px;
+  justify-content: center;
+  overflow: auto;
 }
 
 .book {
-min-height: 225px;
-border: 1px solid blue;
-padding: 5px;
+  min-height: 225px;
+  border: 1px solid blue;
+  padding: 5px;
 }
