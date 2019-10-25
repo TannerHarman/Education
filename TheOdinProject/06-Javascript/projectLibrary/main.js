@@ -3,12 +3,10 @@ let myLibrary = JSON.parse(localStorage.getItem('books')) || [];
 let submit = document.querySelector('button');
 let bookList = document.querySelector('#book-list');
 
-(() => {
-  bookPreload = myLibrary.map((book) => {
+(populateExistingBooks = () => {
+  myLibrary.map((book) => {
     return displayBooks(book);
-  }).join('');
-
-  bookList.innerHTML = bookPreload;
+  });
 })();
 
 submit.addEventListener('click', (e) => {
@@ -29,7 +27,7 @@ function Book(title, author, pages, read) {
 };
 
 function displayBooks(book) {
-  return bookList.innerHTML  = `
+  return bookList.innerHTML  += `
   <div data-id='${book.id}' class="book">
     <div class="title">Book: ${book.title}</div>
     <div class="author">Author: ${book.author}</div>
@@ -64,12 +62,11 @@ function removeBook(e) {
       let book = e.target.parentElement;
       bookList.removeChild(book);
 
-      updatedLib = myLibrary.filter((storedBook) => {
-        storedBook.id != Number(book.dataset.id)
+      myLibrary = myLibrary.filter((storedBook) => {
+        return storedBook.id != Number(book.dataset.id)
       })
-      console.log(updatedLib);
-      myLibray = updatedLib;
-      console.log(myLibrary);
+      
+      localStorage.setItem('books', JSON.stringify(myLibrary));
     }
   };
 }
