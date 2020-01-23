@@ -14,31 +14,42 @@
     <h1>Odin Tic Tac Toe</h1>
 
     <section id="gameboard">
-      <div data-id='a1' class='cell'>A - 1</div>
-      <div data-id='a2' class='cell'>A - 2</div>
-      <div data-id='a3' class='cell'>A - 3</div>
-      <div data-id='b1' class='cell'>B - 1</div>
-      <div data-id='b2' class='cell'>B - 2</div>
-      <div data-id='b3' class='cell'>B - 3</div>
-      <div data-id='c1' class='cell'>C - 1</div>
-      <div data-id='c2' class='cell'>C - 2</div>
-      <div data-id='c3' class='cell'>C - 3</div>
+      <div data-id='1' class='cell'></div>
+      <div data-id='2' class='cell'></div>
+      <div data-id='3' class='cell'></div>
+      <div data-id='4' class='cell'></div>
+      <div data-id='5' class='cell'></div>
+      <div data-id='6' class='cell'></div>
+      <div data-id='7' class='cell'></div>
+      <div data-id='8' class='cell'></div>
+      <div data-id='9' class='cell'></div>
     </section>
 
     <section id="controls">
+      <div id="inputs">
+        <div class="player-field">
+          <input type="text" data-turn='true' name='playerOne' placeholder="Player One">
+          <label for="playerOne">Token <span>X</span></label>
+        </div>
 
-      <div class="player">
-        <input type="text" name='playerOne' placeholder="Player One">
-        <label for="playerOne">Token <span>X</span></label>
+        <div class="player-field">
+          <input type="text" data-turn='false' name='playerTwo' placeholder="Player Two">
+          <label for="playerTwo">Token <span>O</span></label>  
+        </div>
+
+        <button id='start'>Start</button id='start'>
       </div>
 
-      <div class="player">
-        <input type="text" name='playerTwo' placeholder="Player Two">
-        <label for="playerTwo">Token <span>0</span></label>  
+      <div id="scoreboard">
+        <div class='player-score' id=""><h1>Yellow-1</h1> <div>0</div></div>
+
+        <div class="buttons">
+          <button id="new-round">New Round</button>
+          <button id="new-game">New Game</button>
+        </div>
+
+        <div class='player-score' id=""><h1>Yellow-1</h1> <div>0</div></div>
       </div>
-
-      <button>Start</button>
-
     </section>
   </body>
 </html>

@@ -5,10 +5,6 @@ body {
 }
 
 #gameboard {
-  width: 75vw;
-  height: 75vw;
-  max-width: 600px;
-  max-height: 600px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -17,33 +13,41 @@ body {
   border: 1px solid black;
   display: grid;
   place-content: center;
+  height: 25vw;
+  width: 25vw;
+  max-height: 200px;
+  max-width: 200px;
 }
 
 .cell:nth-child(1),
 .cell:nth-child(2),
 .cell:nth-child(3) {
-  border-top: none;
+  border-top: 1px solid transparent;
 }
 
 .cell:nth-child(3),
 .cell:nth-child(6),
 .cell:nth-child(9) {
-  border-right: none;
+  border-right: 1px solid transparent;
 }
 
 .cell:nth-child(1),
 .cell:nth-child(4),
 .cell:nth-child(7) {
-  border-left: none;
+  border-left: 1px solid transparent;
 }
 
 .cell:nth-child(7),
 .cell:nth-child(8),
 .cell:nth-child(9) {
-  border-bottom: none;
+  border-bottom: 1px solid transparent;
 }
 
-#controls {
+#scoreboard {
+  height: 110px;
+}
+
+#inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 50px;
@@ -51,12 +55,25 @@ body {
   place-items: center;
 }
 
-#controls div {
+#scoreboard {
+  display: none;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-gap: 20px 50px;
+}
+
+.player-score, 
+.buttons {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+#inputs div {
   display: grid;
   grid-gap: 10px;
   place-items: center;
 }
 
-#controls button {
+#inputs button {
   grid-column: 1/-1;
 }
