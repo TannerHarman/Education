@@ -80,7 +80,7 @@ const gameModule = (() => {
         
         if (cellCount === 3) {
           updateScore(player)
-          winningActions();
+          winningActions(player);
         }
       })
 
@@ -133,7 +133,9 @@ const guiModule = (() => {
   const startButton = document.querySelector('#start');
   const newRoundButton = document.querySelector('#new-round');
   const newGameButton = document.querySelector('#new-game');
-  const players = document.querySelectorAll('.player-field')
+  const playerInputs = document.querySelectorAll('.player-field')
+  const players = gameModule.getPlayers() || [];
+  const winner = document.querySelector('#winners-name');
 
   const updateCells = function() {
     let players = gameModule.getPlayers();
@@ -170,9 +172,13 @@ const guiModule = (() => {
   }
 
   const newRound = () => {
-    gameModule.newRound(gameModule.getPlayers());
+    gameModule.newRound(players);
     clearBoard();
     boardListener();
+
+    if (winner.parentElement.classList.contains('banner-popup')) {
+      winningBanner(' ')
+    }
   }
 
   const boardListener = () => {
@@ -188,21 +194,24 @@ const guiModule = (() => {
   newRoundButton.addEventListener('click', newRound);
 
   startButton.addEventListener('click', () => {
-    gamePlayModule.players(players);
+    gamePlayModule.players(playerInputs);
     controlShift();
-    updateScoreBoard(gameModule.getPlayers());
+    updateScoreBoard(players);
   })
 
-  function winningActions() {
+  function winningActions(player) {
     gameBoard.forEach((cell) => {
       cell.removeEventListener('click', updateCells);
     })
 
-    updateScoreBoard(gameModule.getPlayers());
+    updateScoreBoard(players);
+    winningBanner(player);
+  }
 
+  function winningBanner(player) {
+    winner.innerText = player.name;
+    winner.parentElement.classList.toggle('banner-popup');
   }
 
   boardListener();
-
-  return {boardListener}
 })();
