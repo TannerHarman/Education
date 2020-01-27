@@ -17,14 +17,15 @@ submit.addEventListener('click', (e) => {
 
 bookList.addEventListener('click', removeBook);
 
-
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.status = read;
-  this.id = Math.round(Math.random() * 1000);
-};
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = read;
+    this.id = Math.round(Math.random() * 1000);
+  }
+}
 
 function displayBooks(book) {
   return bookList.innerHTML  += `
