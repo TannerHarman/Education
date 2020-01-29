@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst contactConetent = \n/*template*/ `\n  <div class='homepage-tagline'> \n    <h2>Contact us!</h2>\n    <p>Phone - 888-888-8888</p>\n    <p>E-mail - Odin@OdinSpiceShop.com</p>\n  </div>\n`\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (contactConetent);\n\n//# sourceURL=webpack:///./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/homepage.js":
 /*!*************************!*\
   !*** ./src/homepage.js ***!
@@ -106,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst homeConetent = \n/*temp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav */ \"./src/nav.js\");\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n\nconst content = document.querySelector('#content');\nlet page = _menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"];\n\ncontent.innerHTML = _nav__WEBPACK_IMPORTED_MODULE_0__[\"default\"] + page;\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav */ \"./src/nav.js\");\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n\n\n\n\n\nconst content = document.querySelector('#content');\n\nfunction switchPage() {\n  if (this.innerText === 'Home') {\n    pageSetup(_homepage__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n  } else if (this.innerText === 'Menu') {\n    pageSetup(_menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n  } else {\n    pageSetup(_contact__WEBPACK_IMPORTED_MODULE_3__[\"default\"])\n  }\n}\n\nfunction pageSetup(page) {\n  content.innerHTML = _nav__WEBPACK_IMPORTED_MODULE_0__[\"default\"] + page;\n  const menuButtons = document.querySelectorAll('li');\n\n  menuButtons.forEach((button) => {\n    button.addEventListener('click', switchPage);\n  })\n};\n\npageSetup(_homepage__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 

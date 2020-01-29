@@ -6,4 +6,4 @@ const homeConetent =
   </div>
 `
 
-export default homeConetent
+export default homeConetent;

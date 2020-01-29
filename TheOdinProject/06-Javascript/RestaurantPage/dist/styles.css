@@ -39,6 +39,11 @@ nav ul {
   list-style: none;
 }
 
+nav li {
+  padding: 10px;
+  cursor: pointer;
+}
+
 .homepage-tagline {
   padding: 25px;
   background: rgba(255, 255, 255, .9);
