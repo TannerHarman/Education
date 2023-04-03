@@ -1,0 +1,1 @@
+#### This section goes over what a web developer does, what the different roles are, what kind of career paths you could take, and how the Odin Project will help you along the way. They give full warning that it is a long and difficult path to completing the project.
