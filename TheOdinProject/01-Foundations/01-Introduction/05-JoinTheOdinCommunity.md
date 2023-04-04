@@ -1,0 +1,2 @@
+#### TakeAways
+  Overall this section was about how to be polite in the community while learning and helping others learn. The assignment was also to join the community on discord and create a Github. I already had a Github and joined the community. 
