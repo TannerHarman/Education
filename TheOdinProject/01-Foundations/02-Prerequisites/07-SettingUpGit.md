@@ -1,0 +1,2 @@
+#### Takaways
+This section walked us through on creating a Github and connecting it with your local git instance using SSH keys. This has already been set up for me. I watched the Asymmetric Encryption video to learn a bit more about how it works under the hood.
