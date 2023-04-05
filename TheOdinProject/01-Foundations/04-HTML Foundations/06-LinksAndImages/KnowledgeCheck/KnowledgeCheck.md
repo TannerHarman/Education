@@ -2,12 +2,11 @@
 
   ##### What element is used to create a link?
     The anchor Tag.  
-    ```html <a>Link here</a>```
+    
+  ```html <a>Link here</a>```
 
   ##### What is an attribute?
-    It's a label with information inside of the opening brackets of an HTML tag that provides more information on what do do with the tag and how it should function.  
-    For Example  
-    ```html <a href = "https://www.Website435.com/whatever">Link Here</a>
+  ```html <a href = "https://www.Website435.com/whatever">Link Here</a>```
 
   ##### What attribute tells links where to go to?
     href
