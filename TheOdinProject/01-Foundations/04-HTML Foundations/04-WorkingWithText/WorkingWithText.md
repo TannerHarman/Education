@@ -7,6 +7,7 @@ Complete
 Complete
 
 ##### Create Plain Blog
+Complete
 
 #### Knowledge Check
 
