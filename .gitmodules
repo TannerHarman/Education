@@ -1,3 +1,6 @@
 [submodule "TheOdinProject/01-Foundations/04-HTML Foundations/08-recipesProject/OdinProject-Recipes"]
 	path = TheOdinProject/01-Foundations/04-HTML Foundations/08-recipesProject/OdinProject-Recipes
 	url = https://github.com/TannerHarman/OdinProject-Recipes.git
+[submodule "TheOdinProject/01-Foundations/05-CSS Foundations/01-CSSFoundations/OdinProject-Recipes"]
+	path = TheOdinProject/01-Foundations/05-CSS Foundations/01-CSSFoundations/OdinProject-Recipes
+	url = https://github.com/TannerHarman/OdinProject-Recipes.git

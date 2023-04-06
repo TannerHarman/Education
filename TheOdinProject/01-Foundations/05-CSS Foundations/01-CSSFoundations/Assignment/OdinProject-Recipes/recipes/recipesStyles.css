@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 70vw;
+
+  display: grid;
+  place-content: center;
+  margin: auto;
+  row-gap: 20px;
+}
+
+#title {
+  text-align: center;
+}
+
+div * {
+margin: 5px 0;
+}
+
+div h3,
+div h2 {
+  margin-bottom: 10px;
+}
+
+div ul,
+div ol {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+div p {
+  margin-left: 15px;
+}

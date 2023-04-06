@@ -1,0 +1,19 @@
+.p {
+  font-family: 'Verdana', 'DajaVu Sans', sans-serif; 
+  background-color: lightcoral;
+}
+
+#divOne {
+  color: blue;
+  font-size: 36px;
+}
+
+.p.two {
+  font-size: 24px;
+}
+
+#divTwo {
+  background-color: lightgreen;
+  font-size: 24px;
+  font-weight: bold;
+}
