@@ -4,3 +4,6 @@
 [submodule "TheOdinProject/01-Foundations/05-CSS Foundations/01-CSSFoundations/OdinProject-Recipes"]
 	path = TheOdinProject/01-Foundations/05-CSS Foundations/01-CSSFoundations/OdinProject-Recipes
 	url = https://github.com/TannerHarman/OdinProject-Recipes.git
+[submodule "TheOdinProject/01-Foundations/06-FlexBox/05-Project-LandingPage/OdinProject-LandingPage"]
+	path = TheOdinProject/01-Foundations/06-FlexBox/05-Project-LandingPage/OdinProject-LandingPage
+	url = https://github.com/TannerHarman/OdinProject-LandingPage
