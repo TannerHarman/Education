@@ -7,4 +7,4 @@
     Completed
 
   ##### Complete CSS Exercises in the 'Odin Project' Repo
-    
+    Completed
