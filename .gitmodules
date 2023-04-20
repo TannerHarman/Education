@@ -7,3 +7,6 @@
 [submodule "TheOdinProject/01-Foundations/06-FlexBox/05-Project-LandingPage/OdinProject-LandingPage"]
 	path = TheOdinProject/01-Foundations/06-FlexBox/05-Project-LandingPage/OdinProject-LandingPage
 	url = https://github.com/TannerHarman/OdinProject-LandingPage
+[submodule "TheOdinProject/01-Foundations/07-JavaScript Basics/OdinProjects-RockPaperScissors"]
+	path = TheOdinProject/01-Foundations/07-JavaScript Basics/OdinProjects-RockPaperScissors
+	url = https://github.com/TannerHarman/OdinProjects-RockPaperScissors
