@@ -16,3 +16,6 @@
 [submodule "TheOdinProject/01-Foundations/07-JavaScript Basics/13-Etch-A-Sketch-Project/OdinProjects-Etch-a-Sketch"]
 	path = TheOdinProject/01-Foundations/07-JavaScript Basics/13-Etch-A-Sketch-Project/OdinProjects-Etch-a-Sketch
 	url = https://github.com/TannerHarman/OdinProjects-Etch-a-Sketch
+[submodule "TheOdinProject/01-Foundations/07-JavaScript Basics/15-Project-Calculator/OdinProjects-Calculator"]
+	path = TheOdinProject/01-Foundations/07-JavaScript Basics/15-Project-Calculator/OdinProjects-Calculator
+	url = https://github.com/TannerHarman/OdinProjects-Calculator
