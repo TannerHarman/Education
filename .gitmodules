@@ -13,3 +13,6 @@
 [submodule "TheOdinProject/01-Foundations/07-JavaScript Basics/11-DomManipulationAndEvents/Assignment/OdinProjects-RockPaperScissors"]
 	path = TheOdinProject/01-Foundations/07-JavaScript Basics/11-DomManipulationAndEvents/Assignment/OdinProjects-RockPaperScissors
 	url = https://github.com/TannerHarman/OdinProjects-RockPaperScissors
+[submodule "TheOdinProject/01-Foundations/07-JavaScript Basics/13-Etch-A-Sketch-Project/OdinProjects-Etch-a-Sketch"]
+	path = TheOdinProject/01-Foundations/07-JavaScript Basics/13-Etch-A-Sketch-Project/OdinProjects-Etch-a-Sketch
+	url = https://github.com/TannerHarman/OdinProjects-Etch-a-Sketch
