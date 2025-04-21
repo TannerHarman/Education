@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type='text/css' href="/style.css">
+    <script src='script.js' defer></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Odin Tic Tac Toe</h1>
+
+    <section id="gameboard">
+      <div data-id='1' class='cell'></div>
+      <div data-id='2' class='cell'></div>
+      <div data-id='3' class='cell'></div>
+      <div data-id='4' class='cell'></div>
+      <div data-id='5' class='cell'></div>
+      <div data-id='6' class='cell'></div>
+      <div data-id='7' class='cell'></div>
+      <div data-id='8' class='cell'></div>
+      <div data-id='9' class='cell'></div>
+    </section>
+
+    <section class="winning-banner">
+      <h1>Winner!!</h1>
+      <h3 id='winners-name'>Name</h3>
+    </section>
+
+    <section id="controls">
+      <div id="inputs">
+        <div class="player-field">
+          <input type="text" data-turn='true' name='playerOne' placeholder="Player One">
+          <label for="playerOne">Token <span>X</span></label>
+        </div>
+
+        <div class="player-field">
+          <input type="text" data-turn='false' name='playerTwo' placeholder="Player Two">
+          <label for="playerTwo">Token <span>O</span></label>  
+        </div>
+
+        <button id='start'>Start</button id='start'>
+      </div>
+
+      <div id="scoreboard">
+        <div class='player-score' id=""><h1>Yellow-1</h1> <div>0</div></div>
+
+        <div class="buttons">
+          <button id="new-round">New Round</button>
+          <button id="new-game">New Game</button>
+        </div>
+
+        <div class='player-score' id=""><h1>Yellow-1</h1> <div>0</div></div>
+      </div>
+    </section>
+  </body>
+</html>
