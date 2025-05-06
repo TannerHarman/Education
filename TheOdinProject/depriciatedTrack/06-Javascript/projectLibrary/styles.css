@@ -37,13 +37,22 @@ form button {
 }
 
 .form-status {
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(2, auto);
   place-items: center;
   text-align: center;
-} 
+}
 
 .form-status h3 {
   grid-column: 1/-1;
+}
+
+.form-status input {
+  justify-self: start;
+}
+
+.form-status label {
+  justify-self: end;
+  margin-right: 15px;
 }
 
 #book-list {

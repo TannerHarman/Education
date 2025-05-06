@@ -39,8 +39,9 @@ function displayBooks(book) {
 };
 
 function addBookToLibrary(e) {
-  e.preventDefault()
+  e.preventDefault();
   
+  let form = document.querySelector('form');
   let bookTitle = document.querySelector('#title').value;
   let bookAuthor = document.querySelector('#author').value;
   let bookLength = document.querySelector('#length').value;
@@ -54,6 +55,7 @@ function addBookToLibrary(e) {
 
   myLibrary.push(finalBook);
   localStorage.setItem('books', JSON.stringify(myLibrary));
+  form.reset();
 };
 
 function removeBook(e) {
